@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Cormorant Garamond";
+  --font-sans: "Inter";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, #fbf4e6 0%, #f5ead7 52%, #fbf4e6 100%);
+  color: #2d2721;
+  font-family: var(--font-sans), Inter, Arial, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: #d7b79e;
+  color: #2d2721;
+}
+
+img {
+  display: block;
+}
+
+input {
+  font: inherit;
+}
+
+.geo-grid {
+  background-image:
+    linear-gradient(rgba(45, 39, 33, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 39, 33, 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0.6) 62%, transparent 100%);
+}
+
+.geo-panel {
+  position: relative;
+}
+
+.map-paper {
+  background:
+    radial-gradient(circle at 20% 28%, rgba(45, 39, 33, 0.12) 0 2px, transparent 3px),
+    radial-gradient(circle at 72% 70%, rgba(45, 39, 33, 0.12) 0 2px, transparent 3px),
+    linear-gradient(rgba(45, 39, 33, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 39, 33, 0.07) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 28px 28px, 28px 28px;
+}
+
+.metro-stroke {
+  height: 9px;
+  border: 2px solid #2d2721;
+  border-radius: 999px;
+  box-shadow: 2px 2px 0 rgba(45, 39, 33, 0.18);
+}
+
+.metro-map-group {
+  pointer-events: none;
+  outline: none;
+}
+
+.metro-map-group path {
+  transition:
+    opacity 180ms ease,
+    stroke-width 180ms ease,
+    filter 180ms ease;
+}
+
+.metro-map-button {
+  font-family: var(--font-sans), Inter, Arial, sans-serif;
+}
+
+.riso-shape {
+  border: 2px solid #2d2721;
+  box-shadow: 4px 4px 0 rgba(45, 39, 33, 0.18);
+}
+
+.shape-star {
+  clip-path: polygon(50% 0%, 61% 37%, 100% 50%, 61% 63%, 50% 100%, 39% 63%, 0% 50%, 39% 37%);
+}
+
+.shape-burst {
+  clip-path: polygon(
+    50% 0%,
+    58% 32%,
+    86% 14%,
+    68% 42%,
+    100% 50%,
+    68% 58%,
+    86% 86%,
+    58% 68%,
+    50% 100%,
+    42% 68%,
+    14% 86%,
+    32% 58%,
+    0% 50%,
+    32% 42%,
+    14% 14%,
+    42% 32%
+  );
+}
+
+.shape-arch {
+  border-radius: 52% 52% 28% 28%;
+}
+
+.shape-blob {
+  border-radius: 56% 44% 49% 51% / 43% 54% 46% 57%;
+}
+
+.riso-texture::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0.18;
+  background-image: radial-gradient(rgba(45, 39, 33, 0.32) 0.7px, transparent 0.7px);
+  background-size: 5px 5px;
+  mix-blend-mode: multiply;
+}
+
+.card-description {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

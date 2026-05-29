@@ -1,0 +1,3 @@
+{
+  "_how_to_use": "Положи свои фото в public/images/places и добавь сюда пару: \"Елагин остров\": \"/images/places/elagin.jpg\". Название должно совпадать с title из app/places.js."
+}
